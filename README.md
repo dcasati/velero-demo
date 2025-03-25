@@ -1,5 +1,6 @@
 # velero-demo
 
+```bash
 #!/bin/bash
 
 set -e  # Exit immediately if a command fails
@@ -94,6 +95,7 @@ velero install \
     --uploader-type=kopia
 
 echo "Velero setup completed successfully!"
+```
 
 Next steps:
 
