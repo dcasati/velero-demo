@@ -100,16 +100,31 @@ echo "Velero setup completed successfully!"
 Next steps:
 
 1. Check if the backup location has been successfully configured by running the following command:
+
+```bash
 velero backup-location get
+```
 
 1. Create a backup for the pets namespace by running the following command:
+
+```bash
 velero backup create pets-backup --include-namespaces pets
+```
 
 1. deploy the nginx with pv example and create a backup that includes persistent volumes by running the following command:
+
+```bash
 velero backup create nxing-with-pv-backup --include-namespaces nginx-example --snapshot-volumes
+```
 
 1. Add completion to velero commands by running the following command:
+
+```bash
 source <(velero completion bash)
+```
 
 1. backup using kopia
+
+```bash
 velero backup create  nfs-backup-snapshot-2 --include-namespaces=default,nfs-server --snapshot-volumes=true --snapshot-move-data=true --default-volumes-to-fs-backup=true
+```
